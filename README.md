@@ -1,6 +1,8 @@
-# Proyecto: Git Practice 2
+# 0x10. C - printf - Project
 
+## Description
 
+_This project is our first team project as part of the first trimester big projects at Holberton School - Cali - Colombia. This _printf emulates the C function fprint() included in the standard stdio.h library
 
 Este es una prueba de merge conflict. En este proyecto aprenderemos a trabajar en equipo como desarrolladores sobre un mismo proyecto de github_
 
