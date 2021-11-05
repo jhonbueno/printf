@@ -2,7 +2,7 @@
 
 ## Description
 
-_This project is our first team project as part of the first trimester big projects at Holberton School - Cali - Colombia. This _printf emulates the C function fprint() included in the standard stdio.h library
+_This project is our first team project as part of the first trimester projects at Holberton School - Cali. The _printf emulates the C fprint() function  included in the standard library stdio.h
 
 Este es una prueba de merge conflict. En este proyecto aprenderemos a trabajar en equipo como desarrolladores sobre un mismo proyecto de github_
 
