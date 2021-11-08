@@ -25,5 +25,6 @@ int print_string(va_list l);
 int print_char(va_list l);
 int print_percent(void);
 int _printf(const char *format, ...);
+int (*get_function(char s))(va_list);
 
 #endif
