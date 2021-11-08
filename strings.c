@@ -16,7 +16,7 @@ int print_string(va_list l)
 	if (s == NULL)
 		s = "(null)";
 
-	i = _strlen(s);;
+	i = _strlen(s);
 
 	write(STDOUT_FILENO, s, i);
 	return (i);
