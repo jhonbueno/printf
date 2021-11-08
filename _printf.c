@@ -9,13 +9,6 @@
  *
  * Return: integer
  */
-
-
-match_t specifiers_list[] = {
-	{'s', print_string},
-	{'c', print_char},
-	{'%', print_percent}};
-
 int _printf(const char *format, ...)
 {
 	int (*ptrfunction)(va_list);
@@ -36,11 +29,7 @@ int _printf(const char *format, ...)
 		{
 			str_format++;
 
-			for (i = 0; i < flags ; i++)
-			{
-				if (specifiers_list[i].esp == *str_format)
-					ptrfunction = specifiers_list[i].fp;
-			}
+			pfunc = get_function(*str_format);
 			counter += ptrfunction(ap);
 		}
 		else
@@ -49,4 +38,27 @@ int _printf(const char *format, ...)
 
 	va_end(ap);
 	return (counter);
+}
+
+
+/**
+ * get_function - get the function corresponding to especifier
+ * @s: char especifier
+ * Return: return a function corresponding to especifier
+ */
+int (*get_function(char s))(va_list)
+{
+	match_t specifiers_list[] = {
+		{'s', print_string},
+		{'c', print_char},
+		{'%', print_percent}};
+
+	int flags = 3;
+	int i;
+
+	for (i = 0; i < flags ; i++)
+	{
+		if (specifiers_list[i].esp == s)
+			return (specifiers_list[i].fp);
+	}
 }
