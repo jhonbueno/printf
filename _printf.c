@@ -56,7 +56,9 @@ int (*get_function(char especifier))(va_list)
 	match_t specifiers_list[] = {
 		{"s", print_string},
 		{"c", print_char},
-		{"%", print_percent}};
+		{"%", print_percent},
+		{"d", print_integer},
+		{"i", print_integer}};
 
 	int i;
 
