@@ -1,3 +1,4 @@
+#include <stdarg.h>
 #include "main.h"
 
 /**
@@ -19,8 +20,9 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
+	str_format = format;
 
-	for (str_format = format; *str_format != '\0'; str_format++)
+	for ( ; *str_format != '\0'; str_format++)
 	{
 		if (*str_format == '%')
 		{
@@ -42,23 +44,21 @@ int _printf(const char *format, ...)
 
 /**
  * get_function - get the function corresponding to especifier
- * @s: char especifier
+ * @especifier: char especifier
  * Return: return a function corresponding to especifier
  */
-int (*get_function(char s))(va_list)
+int (*get_function(char especifier))(va_list)
 {
 	match_t specifiers_list[] = {
-		{'s', print_string},
-		{'c', print_char},
-		{'%', print_percent}};
+		{"s", print_string},
+		{"c", print_char},
+		{"%", print_percent}};
 
-	int i, j;
+	int i;
 
-	j = 3;
-
-	for (i = 0; i < j ; i++)
+	for (i = 0; specifiers_list[i].esp != NULL ; i++)
 	{
-		if (specifiers_list[i].esp == s)
+		if (*specifiers_list[i].esp == especifier)
 			return (specifiers_list[i].fp);
 	}
 	return (NULL);

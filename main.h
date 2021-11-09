@@ -15,7 +15,7 @@
  */
 struct match_especifier
 {
-	char esp;
+	char *esp;
 	int (*fp)();
 };
 
