@@ -9,12 +9,9 @@
  *
  * Return: integer
  */
-
 int _printf(const char *format, ...)
 {
 	int (*ptrfunction)(va_list);
-	unsigned int flags = 3;
-	unsigned int i;
 	int counter = 0;
 	const char *str_format;
 	va_list ap;
@@ -70,4 +67,5 @@ int (*get_function(char especifier))(va_list)
 		if (*specifiers_list[i].esp == especifier)
 			return (specifiers_list[i].fp);
 	}
+	return (NULL);
 }
