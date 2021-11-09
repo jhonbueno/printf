@@ -35,7 +35,12 @@ int _printf(const char *format, ...)
 
 
 			ptrfunction = get_function(*str_format);
-			counter +=  ptrfunction(ap);
+			if (ptrfunction != NULL)
+			{
+				counter += ptrfunction(ap);
+			}
+			else
+				counter+= _printf("%%%c", *str_format);
 		}
 		else
 			counter += _putchar(*str_format);
