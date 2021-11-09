@@ -12,8 +12,6 @@
 int _printf(const char *format, ...)
 {
 	int (*ptrfunction)(va_list);
-	unsigned int flags = 3;
-	unsigned int i;
 	int counter = 0;
 	const char *str_format;
 	va_list ap;
@@ -29,7 +27,7 @@ int _printf(const char *format, ...)
 		{
 			str_format++;
 
-			pfunc = get_function(*str_format);
+			ptrfunction = get_function(*str_format);
 			counter += ptrfunction(ap);
 		}
 		else
@@ -61,4 +59,5 @@ int (*get_function(char s))(va_list)
 		if (specifiers_list[i].esp == s)
 			return (specifiers_list[i].fp);
 	}
+	return (0);
 }
