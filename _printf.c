@@ -52,10 +52,11 @@ int (*get_function(char s))(va_list)
 		{'c', print_char},
 		{'%', print_percent}};
 
-	int flags = 3;
-	int i;
+	int i, j;
 
-	for (i = 0; i < flags ; i++)
+	j = 3;
+
+	for (i = 0; i < j ; i++)
 	{
 		if (specifiers_list[i].esp == s)
 			return (specifiers_list[i].fp);
