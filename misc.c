@@ -23,6 +23,7 @@ int _strlen(const char *s)
 {
 	const char *end = s;
 
-	while (*end++) {};
+	while (*end++)
+	{};
 	return (end - s - 1);
 }
