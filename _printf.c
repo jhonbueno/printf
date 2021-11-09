@@ -18,9 +18,8 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
-	if (format == NULL || ap == NULL)
+	if (format == NULL)
 		return (-1);
-
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
 	str_format = format;
@@ -34,8 +33,11 @@ int _printf(const char *format, ...)
 			if (*str_format == ' ')
 				return (-1);
 
+
 			ptrfunction = get_function(*str_format);
-			counter += ptrfunction(ap);
+			counter += (ptrfunction)
+				? ptrfunction(ap)
+				: _printf("%%%c", *str_format);
 		}
 		else
 			counter += _putchar(*str_format);
@@ -56,9 +58,7 @@ int (*get_function(char especifier))(va_list)
 	match_t specifiers_list[] = {
 		{"s", print_string},
 		{"c", print_char},
-		{"%", print_percent},
-		{"d", print_integer},
-		{"i", print_integer}};
+		{"%", print_percent}};
 
 	int i;
 
