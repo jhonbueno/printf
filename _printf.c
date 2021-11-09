@@ -20,6 +20,9 @@ int _printf(const char *format, ...)
 
 	if (format == NULL || ap == NULL)
 		return (-1);
+
+	if (format[0] == '%' && format[1] == '\0')
+		return (-1);
 	str_format = format;
 
 	for ( ; *str_format != '\0'; str_format++)
