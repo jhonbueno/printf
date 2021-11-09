@@ -4,7 +4,7 @@
 int main(void)
 {
 	int len;
-	int len2;
+        int len2;
 	char car = 'A';
 	char *str = "Holberton School";
 
@@ -13,7 +13,7 @@ int main(void)
 
 	_printf("%s\n", str);
 
-
+	_printf("H %c\n", car);
 	printf("Length:[%d, %i]\n", len, len2);
 	_printf("Character:[%c]\n", 'H');
 	printf("Character:[%c]\n", 'H');
@@ -21,7 +21,8 @@ int main(void)
 	printf("String:[%s]\n", "I am a string !");
 	len = _printf("Percent:[%%]\n");
 	len2 = printf("Percent:[%%]\n");
-
-
+	_printf("H\n");
+	printf("H\n");
+	printf("hola mundo\n");
 	return (0);
 }
