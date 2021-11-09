@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * count_chiper - function
+ * count_cipher - function
  * @n: integer
  *
  * Return: integer
  */
-int count_chiper(int n)
+int count_cipher(int n)
 {
 	unsigned int i, c;
 
