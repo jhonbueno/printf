@@ -62,5 +62,5 @@ int (*get_function(char s))(va_list)
 		if (specifiers_list[i].esp == s)
 			return (specifiers_list[i].fp);
 	}
-	return (0);
+	return (NULL);
 }
