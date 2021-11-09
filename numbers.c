@@ -6,7 +6,7 @@
  *
  * Return: integer
  */
-int count_chiper(int n)
+int count_cipher(int n)
 {
 	unsigned int i, c;
 
