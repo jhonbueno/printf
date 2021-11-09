@@ -18,9 +18,8 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
-	if (format == NULL || ap == NULL)
+	if (format == NULL)
 		return (-1);
-
 	if (format[0] == '%' && format[1] == '\0')
 		return (-1);
 	str_format = format;
@@ -34,8 +33,14 @@ int _printf(const char *format, ...)
 			if (*str_format == ' ')
 				return (-1);
 
+
 			ptrfunction = get_function(*str_format);
-			counter += ptrfunction(ap);
+			if (ptrfunction != NULL)
+			{
+				counter += ptrfunction(ap);
+			}
+			else
+				counter += _printf("%%%c", *str_format);
 		}
 		else
 			counter += _putchar(*str_format);
