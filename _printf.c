@@ -30,8 +30,15 @@ int _printf(const char *format, ...)
 
 			if (*str_format == ' ')
 				return (-1);
+
 			ptrfunction = get_function(*str_format);
-			counter += ptrfunction(ap);
+
+			if (ptrfunction != NULL)
+			{
+				counter += ptrfunction(ap);
+			}
+			else
+				_printf("%%%c", *str_format);
 		}
 		else
 			counter += _putchar(*str_format);
