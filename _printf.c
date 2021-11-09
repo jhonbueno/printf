@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 				counter += ptrfunction(ap);
 			}
 			else
-				counter+= _printf("%%%c", *str_format);
+				counter += _printf("%%%c", *str_format);
 		}
 		else
 			counter += _putchar(*str_format);
