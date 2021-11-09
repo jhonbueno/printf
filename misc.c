@@ -15,9 +15,8 @@ int _putchar(char c)
 
 /**
  * _strlen - get the len of a string
- * @end: pointer
  * @s: string
- * Return: integer
+ * Return: a integer for count chars
  */
 int _strlen(const char *s)
 {
