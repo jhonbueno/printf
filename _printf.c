@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
-	if (format == NULL)
+	if (format == NULL || ap == NULL)
 		return (-1);
 	str_format = format;
 
