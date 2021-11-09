@@ -28,6 +28,8 @@ int _printf(const char *format, ...)
 		{
 			str_format++;
 
+			if (*str_format == ' ')
+				return (-1);
 			ptrfunction = get_function(*str_format);
 			counter += ptrfunction(ap);
 		}
