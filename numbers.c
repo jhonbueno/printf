@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * count_chiper - function
+ * count_cipher - function
  * @n: integer
  *
  * Return: integer
