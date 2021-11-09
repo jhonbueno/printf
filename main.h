@@ -6,10 +6,12 @@
 #include <unistd.h>
 
 /**
- * match_especifier - structure to match a specifier with respective function
- * related with the especifier
+ * struct match_especifier - structure to match a specifier with respective
+ * function correspondig with the especifier
  * @esp: especifier (%s,%c,%d, ...)
  * @fp: pointer to corresponfind function
+ * Description: the mainly purpouse is matching a especifier with its
+ * correspondig function which is a function pointer.
  */
 struct match_especifier
 {
@@ -17,6 +19,9 @@ struct match_especifier
 	int (*fp)();
 };
 
+/**
+ * match_t - Typedef for unsigned match_especifier
+ */
 typedef struct match_especifier match_t;
 
 int _putchar(char c);
