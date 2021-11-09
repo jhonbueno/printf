@@ -9,9 +9,12 @@
  *
  * Return: integer
  */
+
 int _printf(const char *format, ...)
 {
 	int (*ptrfunction)(va_list);
+	unsigned int flags = 3;
+	unsigned int i;
 	int counter = 0;
 	const char *str_format;
 	va_list ap;
@@ -21,14 +24,13 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-
 	for (str_format = format; *str_format != '\0'; str_format++)
 	{
 		if (*str_format == '%')
 		{
 			str_format++;
 
-			ptrfunction = get_function(*str_format);
+			pfunc = get_function(*str_format);
 			counter += ptrfunction(ap);
 		}
 		else
@@ -60,5 +62,4 @@ int (*get_function(char s))(va_list)
 		if (specifiers_list[i].esp == s)
 			return (specifiers_list[i].fp);
 	}
-	return (NULL);
 }
