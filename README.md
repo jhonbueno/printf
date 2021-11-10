@@ -4,53 +4,33 @@
 
 This function prints the string supplied with special operators to substitute
 according to an specified format.
-```bash
+
+```
 _printf (const char *FORMAT, ARGUMENT...){}
 _printf (const char *format,...){}
 _printf ("%[OPERATOR]");
 ```
 
-.SH DESCRIPTION
 Prints ARGUMENT(s) according to options in supplied FORMAT string:
-.TP
 FORMAT is the string to print with OPERATORS. Specified formats are:
-.TP
-%%: a single '%'
-.TP
-%c
-ARGUMENT for character type is printed.
-.TP
-%s
-ARGUMENT for string type is printed.
-.TP
-%d/%i
-ARGUMENT for integer type is printed.
 
-Prints ARGUMENT(s) according to options in supplied FORMAT string:
+* %%: a single '%'
 
-### Pre-requisitos 📋
+* %c ARGUMENT for character type is printed.
 
-_Que cosas necesitas para instalar el software y como instalarlas, asi como los requerimientos del hardware necesario_
+* %s ARGUMENT for string type is printed.
 
-```
-Da un ejemplo
-```
+* %d/%i ARGUMENT for integer type is printed.
 
-### Instalación 🔧
+## Files included
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+| File | Details |
 
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
+|------- | ----------------------------------------------------- |
+| _printf | prints any string with certain flags for modification |
+38
+​
+39
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
