@@ -1,0 +1,10 @@
+.TH _PRINTF "3" "November 2021" "Holberton"
+.SH NAME
+_printf \- prints string supplied with special operators to substitute according
+to an specified format
+.SH SYNOPSIS
+.B _printf (const char *format,...){}
+.br
+.B _printf ("%
+[\fIOPERATOR\fR]");
+.SH DESCRIPTION
