@@ -31,14 +31,14 @@ int count_cipher(int n)
 int print_integer(va_list list)
 {
 	int n = va_arg(list, int);
-	int res = count_cipher(n);
+	int count = count_cipher(n);
 
 	if (n <= 0)
-		res++;
+		count++;
 	if (n == 0)
-		res;
+		count = 1;
 	print_number(n);
-	return (res);
+	return (count);
 }
 /**
  * print_number - function
