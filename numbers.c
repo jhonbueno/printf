@@ -39,17 +39,17 @@ int print_integer(va_list list)
 		count++;
 	if (number == 0)
 		count = 1;
-	print_number(number);
+	op_number(number);
 	return (count);
 }
 
 
 /**
- * print_number - function
+ * op_number - function
  * @n: integer
  *
  */
-void print_number(int n)
+void op_number(int n)
 {
 	unsigned int number;
 
@@ -64,7 +64,7 @@ void print_number(int n)
 	if (n != 0)
 	{
 		if (number / 10)
-			print_number(number / 10);
+			op_number(number / 10);
 		_putchar((number % 10) + '0');
 	}
 	else

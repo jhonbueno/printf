@@ -2,16 +2,16 @@
 
 /**
  * print_string - print string
- * @l: va_list
+ * @list: va_list
  *
  *
  * Return: integer
  */
 
-int print_string(va_list l)
+int print_string(va_list list)
 {
 	int i;
-	char *s = va_arg(l, char *);
+	char *s = va_arg(list, char *);
 
 	if (s == NULL)
 		s = "(null)";
@@ -24,17 +24,17 @@ int print_string(va_list l)
 
 
 /**
-* print_char - print char
-* @l: va_list
-*
-*
-*
-* Return: 1
-*/
+ * print_char - print char
+ * @list: va_list
+ *
+ *
+ *
+ * Return: 1
+ */
 
-int print_char(va_list l)
+int print_char(va_list list)
 {
-	_putchar(va_arg(l, int));
+	_putchar(va_arg(list, int));
 	return (1);
 }
 
