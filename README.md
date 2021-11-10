@@ -24,13 +24,14 @@ FORMAT is the string to print with OPERATORS. Specified formats are:
 
 ## Files included
 
-| File | Details |
-
-|------- | ----------------------------------------------------- |
-| _printf | prints any string with certain flags for modification |
-38
-​
-39
+| File                 | Details                                    |
+|--------------------- | ------------------------------------------ |
+| [_printf](./_printf) | prints any string according to format      |
+| [main.h](./main.h)   | containts all the prototypes               |
+| [misc.c](./misc.c)   | containts all the prototypes               |
+| [strings.c](./strings.c)      | containts all the prototypes               |
+| main.h ./main.h      | containts all the prototypes               |
+| main.h ./main.h      | containts all the prototypes               |
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
