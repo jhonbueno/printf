@@ -35,6 +35,8 @@ int print_integer(va_list list)
 
 	if (n <= 0)
 		res++;
+	if (n == 0)
+		res += 2;
 	print_number(n);
 	return (res);
 }
