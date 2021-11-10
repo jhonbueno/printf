@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * count_cipher - function
  * @n: integer
@@ -8,36 +9,41 @@
  */
 int count_cipher(int n)
 {
-	unsigned int i, c;
+	unsigned int i, count;
 
-	c = 0;
+	count = 0;
 
-	(n < 0) ? (i = (n * (-1))) : (i = n);
+	(n < 0)	? (i = (n * (-1))) : (i = n);
 
 	do {
 		i /= 10;
-		++c;
+		++count;
 	} while (i != 0);
 
-	return (c);
+	return (count);
 }
+
 
 /**
-  * print_integer - function
-  * @list: lista
-  *
-  * Return: integer
-  */
+ * print_integer - function
+ * @list: lista
+ *
+ * Return: integer
+ */
 int print_integer(va_list list)
 {
-	int n = va_arg(list, int);
-	int res = count_cipher(n);
+	int number = va_arg(list, int);
+	int count = count_cipher(number);
 
-	if (n <= 0)
-		res++;
-	print_number(n);
-	return (res);
+	if (number <= 0)
+		count++;
+	if (number == 0)
+		count = 1;
+	print_number(number);
+	return (count);
 }
+
+
 /**
  * print_number - function
  * @n: integer
@@ -45,17 +51,22 @@ int print_integer(va_list list)
  */
 void print_number(int n)
 {
-	unsigned int n1;
+	unsigned int number;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n1 = -n;
+		number = -n;
 	}
 	else
-		n1 = n;
+		number = n;
 
-	if (n1 / 10)
-		print_number(n1 / 10);
-	_putchar((n1 % 10) + '0');
+	if (n != 0)
+	{
+		if (number / 10)
+			print_number(number / 10);
+		_putchar((number % 10) + '0');
+	}
+	else
+		_putchar(n + '0');
 }
