@@ -32,7 +32,6 @@ int print_percent(void);
 int _printf(const char *format, ...);
 int (*get_function(char s))(va_list);
 
-int count_chiper(int n);
 int print_integer(va_list list);
 void op_number(int n);
 
