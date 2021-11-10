@@ -1,0 +1,33 @@
+.TH _PRINTF "3" "November 2021" "Holberton"
+.SH NAME
+_printf \- prints string supplied with special operators to substitute according
+to an specified format
+.SH SYNOPSIS
+.B _printf (const char *
+\fIFORMAT\fR , \fIARGUMENT\fR...){}
+.br
+.B _printf (const char *format,...){}
+.br
+.B _printf ("%
+[\fIOPERATOR\fR]");
+.SH DESCRIPTION
+Prints ARGUMENT(s) according to options in supplied FORMAT string:
+.TP
+FORMAT is the string to print with OPERATORS. Specified formats are:
+.TP
+%%: a single '%'
+.TP
+%c
+ARGUMENT for character type is printed.
+.TP
+%s
+ARGUMENT for string type is printed.
+.TP
+%d/%i
+ARGUMENT for integer type is printed.
+.SH AUTHOR
+Written by Jhon Bueno and Diego Jojoa.
+.SH "REPORTING BUGS"
+https://www.github.com/jhonbueno/printf
+.SH "SEE ALSO"
+man printf
