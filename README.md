@@ -1,17 +1,32 @@
-# 0x10. C - printf - Project
+# _printf function
 
 ## Description
 
-_This project is our first team project as part of the first trimester projects at Holberton School - Cali. The _printf emulates the C fprint() function  included in the standard library stdio.h
+This function prints the string supplied with special operators to substitute
+according to an specified format.
+```bash
+_printf (const char *FORMAT, ARGUMENT...){}
+_printf (const char *format,...){}
+_printf ("%[OPERATOR]");
+```
 
-Este es una prueba de merge conflict. En este proyecto aprenderemos a trabajar en equipo como desarrolladores sobre un mismo proyecto de github_
+.SH DESCRIPTION
+Prints ARGUMENT(s) according to options in supplied FORMAT string:
+.TP
+FORMAT is the string to print with OPERATORS. Specified formats are:
+.TP
+%%: a single '%'
+.TP
+%c
+ARGUMENT for character type is printed.
+.TP
+%s
+ARGUMENT for string type is printed.
+.TP
+%d/%i
+ARGUMENT for integer type is printed.
 
-## Comenzando Git Team 🚀
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
-
+Prints ARGUMENT(s) according to options in supplied FORMAT string:
 
 ### Pre-requisitos 📋
 
