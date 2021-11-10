@@ -25,3 +25,9 @@ ARGUMENT for string type is printed.
 .TP
 %d/%i
 ARGUMENT for integer type is printed.
+.SH AUTHOR
+Written by Jhon Bueno and Diego Jojoa.
+.SH "REPORTING BUGS"
+https://www.github.com/jhonbueno/printf
+.SH "SEE ALSO"
+man printf
