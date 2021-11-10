@@ -7,7 +7,7 @@
  *
  * Return: integer
  */
-int count_cipher(int n)
+nt count_cipher(int n)
 {
 	unsigned int i, count;
 
