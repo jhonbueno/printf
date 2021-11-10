@@ -26,12 +26,11 @@ FORMAT is the string to print with OPERATORS. Specified formats are:
 
 | File                 | Details                                    |
 |--------------------- | ------------------------------------------ |
-| [_printf](./_printf) | prints any string according to format      |
+| [_printf](./_printf.c) | prints any string according to format    |
 | [main.h](./main.h)   | containts all the prototypes               |
-| [misc.c](./misc.c)   | containts all the prototypes               |
-| [strings.c](./strings.c)      | containts all the prototypes               |
-| main.h ./main.h      | containts all the prototypes               |
-| main.h ./main.h      | containts all the prototypes               |
+| [misc.c](./misc.c)   | putchar function and strlen                |
+| [strings.c](./strings.c) | functions for printing strings      |
+| [numbers.c](./numbers.c) | function for print integer numbers               |
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
