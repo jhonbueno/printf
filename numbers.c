@@ -1,29 +1,5 @@
 #include "main.h"
 
-
-/**
- * count_cipher - function
- * @n: integer
- *
- * Return: integer
- */
-int count_cipher(int n)
-{
-	unsigned int i, count;
-
-	count = 0;
-
-	(n < 0)	? (i = (n * (-1))) : (i = n);
-
-	do {
-		i /= 10;
-		++count;
-	} while (i != 0);
-
-	return (count);
-}
-
-
 /**
  * print_integer - function
  * @list: lista
@@ -33,16 +9,22 @@ int count_cipher(int n)
 int print_integer(va_list list)
 {
 	int number = va_arg(list, int);
-	int count = count_cipher(number);
+	unsigned int i, count;
 
-	if (number <= 0)
-		count++;
-	if (number == 0)
-		count = 1;
+	count = 0;
+
+	(number < 0)? (i = (number * (-1))) : (i = number);
+
+	do {
+		i /= 10;
+		++count;
+	} while (i != 0);
+
+	(number < 0) ? (count+=1) : count;
+
 	op_number(number);
 	return (count);
 }
-
 
 /**
  * op_number - function
