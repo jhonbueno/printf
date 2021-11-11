@@ -39,8 +39,6 @@ int _printf(const char *format, ...)
 			{
 				counter += ptrfunction(ap);
 			}
-			else
-				counter += _printf("%%%c", *str_format);
 		}
 		else
 			counter += _putchar(*str_format);
@@ -63,7 +61,8 @@ int (*get_function(char especifier))(va_list)
 		{"c", print_char},
 		{"%", print_percent},
 		{"d", print_integer},
-		{"i", print_integer}};
+		{"i", print_integer},
+		{NULL, NULL}};
 
 	int i;
 
